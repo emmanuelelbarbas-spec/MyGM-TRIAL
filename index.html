@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -10,132 +9,26 @@
 <body>
   <header>
     <h1>WWE Universe Ranking Manager 2.0</h1>
-    <p>Gestor local de rankings, campeones, combates y carteleras.</p>
-  </header>
-
-  <nav id="tabs"></nav>
-  <main id="content"></main>
-
-  <template id="tab-template">
-    <button class="tab-btn"></button>
     <p>Gestión local de rankings, campeones, combates y carteleras</p>
   </header>
 
-  <nav class="tabs" id="mainTabs">
-    <button data-tab="estado" class="active">Estado del Universo</button>
-    <button data-tab="luchadores">Gestión de Luchadores</button>
-    <button data-tab="rankings">Rankings</button>
-    <button data-tab="combates">Registrar Combate</button>
-    <button data-tab="carteleras">Carteleras</button>
-    <button data-tab="listado">Listado General</button>
-    <button data-tab="historial">Historial de Shows</button>
-  </nav>
-
-  <main>
-    <section id="tab-estado" class="tab-panel active panel">
-      <h2>Estado del Universo</h2>
-      <div id="universeStats" class="grid two"></div>
-      <div class="actions-row">
-        <button id="runSoftDraftBtn" class="primary">Ejecutar Soft Draft</button>
-        <button id="runAnnualDraftBtn">Ejecutar Draft Anual</button>
-      </div>
-      <div id="draftResult" class="notice"></div>
-    </section>
-
-    <section id="tab-luchadores" class="tab-panel panel">
-      <h2>Gestión de Luchadores</h2>
-      <form id="wrestlerForm" class="grid two">
-        <label>Nombre <input type="text" id="name" required /></label>
-        <label>Marca
-          <select id="brand" required></select>
-        </label>
-        <label>División
-          <select id="division" required></select>
-        </label>
-        <label class="checkbox"><input type="checkbox" id="isTag" /> Es Tag Team</label>
-        <label id="tagNameWrap" class="hidden">Nombre del Tag Team <input type="text" id="tagName" /></label>
-        <label id="member1Wrap" class="hidden">Integrante 1 <input type="text" id="member1" /></label>
-        <label id="member2Wrap" class="hidden">Integrante 2 <input type="text" id="member2" /></label>
-        <button type="submit" class="primary">Registrar</button>
-      </form>
-      <div id="wrestlerList"></div>
-    </section>
-
-    <section id="tab-rankings" class="tab-panel panel">
-      <h2>Rankings</h2>
-      <div class="grid two">
-        <label>Marca <select id="rankingBrand"></select></label>
-        <label>División <select id="rankingDivision"></select></label>
-      </div>
-      <div id="rankingHeader"></div>
-      <table>
-        <thead>
-          <tr><th>#</th><th>Nombre</th><th>Puntos</th><th>Movimiento</th><th>Victorias</th><th>Derrotas</th><th>Estado</th></tr>
-        </thead>
-        <tbody id="rankingTable"></tbody>
-      </table>
-    </section>
-
-    <section id="tab-combates" class="tab-panel panel">
-      <h2>Registrar Combate</h2>
-      <form id="fightForm" class="grid two">
-        <label>Marca <select id="fightBrand"></select></label>
-        <label>División <select id="fightDivision"></select></label>
-        <label>Luchador A <select id="fighterA"></select></label>
-        <label>Luchador B <select id="fighterB"></select></label>
-        <label>Ganador <select id="winner"></select></label>
-        <label class="checkbox"><input type="checkbox" id="isTitleFight" /> Combate por campeonato</label>
-        <button type="submit" class="primary">Guardar Resultado</button>
-      </form>
-      <p class="hint">El campeón no suma ni resta puntos en shows semanales.</p>
-    </section>
-
-    <section id="tab-carteleras" class="tab-panel panel">
-      <h2>Carteleras</h2>
-      <div class="actions-row">
-        <button id="genRawBtn" class="raw">Generar RAW</button>
-        <button id="genSdBtn" class="sd">Generar SmackDown</button>
-      </div>
-      <div class="actions-row">
-        <input id="ppvName" type="text" placeholder="Nombre del PPV (obligatorio)" />
-        <button id="genPpvBtn" class="primary">Generar PPV</button>
-      </div>
-      <div id="cardsOutput"></div>
-    </section>
-
-    <section id="tab-listado" class="tab-panel panel">
-      <h2>Listado General de Luchadores</h2>
-      <div id="generalList"></div>
-    </section>
-
-    <section id="tab-historial" class="tab-panel panel">
-      <h2>Historial de Shows</h2>
-      <div class="tabs sub" id="historyTabs">
-        <button data-h="RAW" class="active raw">RAW</button>
-        <button data-h="SMACKDOWN" class="active sd">SMACKDOWN</button>
-        <button data-h="PPV" class="active">PPV</button>
-      </div>
-      <div id="historyOutput"></div>
-    </section>
-  </main>
-
-    <p>Gestión local de rankings, campeonatos y carteleras</p>
-  </header>
-
-  <nav id="tabs" class="tabs"></nav>
+  <nav id="tabs"></nav>
 
   <main>
     <section id="tab-estado" class="tab-panel"></section>
-    <section id="tab-luchadores" class="tab-panel hidden"></section>
-    <section id="tab-rankings" class="tab-panel hidden"></section>
-    <section id="tab-combates" class="tab-panel hidden"></section>
-    <section id="tab-carteleras" class="tab-panel hidden"></section>
-    <section id="tab-listado" class="tab-panel hidden"></section>
-    <section id="tab-historial" class="tab-panel hidden"></section>
+    <section id="tab-gestion" class="tab-panel"></section>
+    <section id="tab-rankings" class="tab-panel"></section>
+    <section id="tab-combate" class="tab-panel"></section>
+    <section id="tab-carteleras" class="tab-panel"></section>
+    <section id="tab-listado" class="tab-panel"></section>
+    <section id="tab-historial" class="tab-panel"></section>
   </main>
 
-  <template id="card-template">
-    <article class="card"></article>
+  <template id="base-card-template">
+    <article class="card">
+      <h3></h3>
+      <div class="card-body"></div>
+    </article>
   </template>
 
   <script src="app.js"></script>

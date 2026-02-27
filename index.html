@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WWE Universe Ranking Manager 2.0</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>WWE Universe Ranking Manager 2.0</h1>
+    <p>Gestión local de rankings, campeonatos y carteleras</p>
+  </header>
+
+  <nav id="tabs" class="tabs"></nav>
+
+  <main>
+    <section id="tab-estado" class="tab-panel"></section>
+    <section id="tab-luchadores" class="tab-panel hidden"></section>
+    <section id="tab-rankings" class="tab-panel hidden"></section>
+    <section id="tab-combates" class="tab-panel hidden"></section>
+    <section id="tab-carteleras" class="tab-panel hidden"></section>
+    <section id="tab-listado" class="tab-panel hidden"></section>
+    <section id="tab-historial" class="tab-panel hidden"></section>
+  </main>
+
+  <template id="card-template">
+    <article class="card"></article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

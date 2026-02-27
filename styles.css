@@ -1,0 +1,86 @@
+:root {
+  --bg: #0f1116;
+  --panel: #1a1f2b;
+  --panel-2: #121722;
+  --text: #e8edf7;
+  --muted: #9ca6bd;
+  --raw: #bb2026;
+  --sd: #1f58d8;
+  --ok: #24c36b;
+  --bad: #e15555;
+  --warn: #f2b84a;
+  --line: #2a3347;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  background: #0b0f17;
+}
+header h1 { margin: 0 0 6px; font-size: 1.35rem; }
+header p { margin: 0; color: var(--muted); }
+#tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.tab-btn {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tab-btn.active { border-color: #7e92c9; background: #25304a; }
+#content { padding: 18px; }
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  padding: 12px;
+}
+.card h3 { margin-top: 0; }
+.brand-raw { border-left: 4px solid var(--raw); }
+.brand-smackdown { border-left: 4px solid var(--sd); }
+label { display: block; margin-bottom: 8px; font-size: 0.92rem; color: var(--muted); }
+input, select, button, textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+}
+button { cursor: pointer; font-weight: 600; }
+.row { display: flex; gap: 10px; }
+.row > * { flex: 1; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th, td { border-bottom: 1px solid var(--line); padding: 7px; text-align: left; }
+th { color: #bac5de; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .75rem; }
+.badge.ok { background: rgba(36,195,107,.2); color: #77f0ad; }
+.badge.warn { background: rgba(242,184,74,.2); color: #f8cf7b; }
+.badge.raw { background: rgba(187,32,38,.25); }
+.badge.sd { background: rgba(31,88,216,.25); }
+.actions { display: flex; gap: 6px; }
+.actions button { width: auto; padding: 6px 10px; }
+.movement-up { color: var(--ok); }
+.movement-down { color: var(--bad); }
+small, .muted { color: var(--muted); }
+.alert { color: #ffd88a; font-size: .82rem; font-weight: 700; }
+.show-card { margin-bottom: 12px; }
